@@ -1,0 +1,397 @@
+/* ============================================
+   RESET Y BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef2f5;
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  line-height: 1.5;
+  color: #1e2b37;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+.cv-container {
+  max-width: 1000px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px -12px rgba(0, 20, 30, 0.25);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+/* ============================================
+   HEADER / PERFIL
+   ============================================ */
+.cv-header {
+  background: #0b1a26;
+  color: #f0f7fc;
+  padding: 2.2rem 2.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-left h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.3rem;
+  color: white;
+}
+
+.header-left .titulo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #b6d0e0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.header-left .titulo::before {
+  content: "▹";
+  color: #5f9bd0;
+  font-weight: 300;
+}
+
+.header-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1.5rem;
+  border-radius: 60px;
+  backdrop-filter: blur(2px);
+}
+
+.header-right span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-right i {
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.header-right a {
+  color: #d4e6f5;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: 0.2s;
+}
+
+.header-right a:hover {
+  color: white;
+  border-bottom-color: #5f9bd0;
+}
+
+/* ============================================
+   CUERPO PRINCIPAL: 2 COLUMNAS
+   ============================================ */
+.cv-body {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 0;
+  background: #fff;
+}
+
+/* ============================================
+   COLUMNA IZQUIERDA (SIDEBAR)
+   ============================================ */
+.sidebar {
+  background: #f5f9fd;
+  padding: 2rem 2rem 2.5rem;
+  border-right: 1px solid #e2eaf0;
+}
+
+.section {
+  margin-bottom: 2.4rem;
+}
+
+.section-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #1f4b66;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid rgba(31, 75, 102, 0.15);
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title i {
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+/* Perfil texto */
+.perfil-texto {
+  font-size: 0.95rem;
+  color: #1f2e3b;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Contacto */
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.contacto-item .emoji {
+  width: 1.6rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contacto-item a {
+  color: #1e3b4e;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: 0.2s;
+}
+
+.contacto-item a:hover {
+  border-bottom-color: #2b6f94;
+  color: #0b1a26;
+}
+
+/* Habilidades con barras */
+.habilidad {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+}
+
+.habilidad-nombre {
+  font-weight: 500;
+  width: 85px;
+  font-size: 0.9rem;
+  color: #1f3b4b;
+}
+
+.habilidad-barras {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.barra {
+  height: 6px;
+  width: 100%;
+  background: #d6e2ec;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.barra .relleno {
+  height: 100%;
+  background: #2c6b8f;
+  border-radius: 8px;
+  width: 0%;
+}
+
+/* Niveles de habilidad */
+.relleno.alta { width: 90%; }
+.relleno.media-alta { width: 75%; }
+.relleno.media { width: 60%; }
+.relleno.basico { width: 40%; }
+
+/* Idiomas */
+.idioma-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #dbe4ec;
+  font-size: 0.95rem;
+}
+
+.idioma-item:last-child {
+  border-bottom: 0;
+}
+
+.idioma-nivel {
+  color: #1f4b66;
+  font-weight: 400;
+}
+
+/* ============================================
+   COLUMNA DERECHA (EXPERIENCIA, EDUCACIÓN)
+   ============================================ */
+.main-content {
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  background: #ffffff;
+}
+
+.entry {
+  margin-bottom: 2rem;
+}
+
+.entry-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
+}
+
+.entry-titulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0b1a26;
+}
+
+.entry-sub {
+  font-weight: 500;
+  color: #1f4b66;
+  margin-bottom: 0.2rem;
+}
+
+.entry-fecha {
+  font-size: 0.8rem;
+  background: #e5eef7;
+  padding: 0.2rem 0.9rem;
+  border-radius: 40px;
+  color: #1a4055;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.entry-desc {
+  margin-top: 0.4rem;
+  padding-left: 0.2rem;
+  font-size: 0.95rem;
+  color: #1f2e3b;
+}
+
+.entry-desc ul {
+  list-style: none;
+  margin-top: 0.3rem;
+}
+
+.entry-desc li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.entry-desc li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #2c6b8f;
+  font-weight: 500;
+}
+
+.entry-desc p {
+  margin-top: 0.2rem;
+}
+
+/* Badges / Certificaciones */
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.badge {
+  background: #e5eef7;
+  padding: 0.25rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: #12405a;
+  font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 780px) {
+  .cv-body {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #e2eaf0;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.8rem;
+  }
+
+  .header-right {
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .main-content {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-left h1 {
+    font-size: 2rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .entry-fecha {
+    white-space: normal;
+    font-size: 0.75rem;
+  }
+
+  .habilidad {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+  }
+
+  .habilidad-nombre {
+    width: 100%;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
